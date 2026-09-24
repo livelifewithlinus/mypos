@@ -1,0 +1,41 @@
+{
+  "name": "openpos",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "api": "tsx server/index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:push": "drizzle-kit push",
+    "db:seed": "tsx src/db/seed.ts",
+    "typecheck:server": "tsc -p tsconfig.server.json"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "@types/jsbarcode": "^3.11.4",
+    "@vitejs/plugin-react": "latest",
+    "@zxing/browser": "^0.2.1",
+    "autoprefixer": "latest",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.36.4",
+    "jsbarcode": "^3.12.3",
+    "lucide-react": "^0.468.0",
+    "postcss": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwindcss": "^3.4.17",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "drizzle-kit": "^0.28.1",
+    "tsx": "^4.19.2",
+    "typescript": "latest"
+  }
+}
